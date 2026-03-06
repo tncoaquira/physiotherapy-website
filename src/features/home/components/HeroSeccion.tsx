@@ -8,7 +8,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
-  const whatsappNumber = '+591730087757'; 
+  const whatsappNumber = '+59173087757'; 
   const whatsappMessage = 'Hola%20quisiera%20información%20sobre%20sus%20servicios';
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
           Talento Humamo Productivo
         </h1>
         <p className="text-xl md:text-xl mb-8 max-w-2xl drop-shadow-lg">
-        Pagina en construcción, para mas informacion contactanos al 730087757
+        Pagina en construcción, para mas informacion contactanos al 73087757
         </p>
         <Button
           asChild

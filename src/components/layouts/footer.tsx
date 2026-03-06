@@ -45,7 +45,7 @@ const Footer = () => {
             </p>
 
             <Button asChild>
-              <Link to="/pricing">+591 730087757</Link>
+              <Link to="/pricing">+591 73087757</Link>
             </Button>
           </div>
 
