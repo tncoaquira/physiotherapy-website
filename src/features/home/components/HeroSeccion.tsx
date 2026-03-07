@@ -2,7 +2,6 @@ import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { cn } from '~/lib/utils';
 import { Button } from '~/components/ui/button';
-
 interface HeroSectionProps {
   className?: string;
 }
@@ -13,7 +12,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <section className={cn("relative w-full h-screen overflow-hidden", className)}>
+    <section className={cn("top-0 w-full h-screen overflow-hidden", className)}>
       <video
         autoPlay
         loop
