@@ -1,6 +1,6 @@
 import React from "react";
 import { MessageCircle } from "lucide-react";
-import { Button } from "~/components/ui/button";
+import { Button } from "~/common/components/ui/button";
 
 interface ContactBtnProps {
   href?: string;

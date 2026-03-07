@@ -1,55 +1,80 @@
-import React from 'react';
-import { MessageCircle } from 'lucide-react';
-import { cn } from '~/lib/utils';
-import { Button } from '~/components/ui/button';
-interface HeroSectionProps {
+import React from "react";
+import { about } from "~/common/constants";
+import { cn } from "~/lib/utils";
+import { Button } from "~/common/components/ui/button";
+import { Card, CardContent } from "~/common/components/ui/card";
+import { Link } from "react-router-dom";
+import { CardBtn } from "~/common/components/card-btn";
+import { ArrowRight } from "lucide-react";
+
+interface HeroHeaderProps {
+  companyName?: string;
+  tagline?: string;
+  videoSrc?: string;
+  ctaText?: string;
+  handleCardClick?: () => void;
   className?: string;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
-  const whatsappNumber = '+59173087757'; 
-  const whatsappMessage = 'Hola%20quisiera%20información%20sobre%20sus%20servicios';
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-
+const HeroHeader: React.FC<HeroHeaderProps> = ({
+  companyName = about.NAME,
+  tagline = about.PRESENTATION,
+  videoSrc = "/6111051-hd_1920_1080_25fps.mp4",
+  ctaText = "MAS INFOMACION",
+  handleCardClick,
+  className,
+}) => {
   return (
-    <section className={cn("top-0 w-full h-screen overflow-hidden", className)}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src="/6111051-hd_1920_1080_25fps.mp4" type="video/mp4" />
-        Tu navegador no soporta videos.
-      </video>
-      <div className="absolute inset-0 bg-black/50" />
+    <section className={cn("top-0 h-screen overflow-hidden ", className)}>
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+          src={videoSrc}
+        />
+        <div className="absolute inset-0 bg-linear-to-r from-black/100 to-transparent" />
+      </div>
+      
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-          Talento Humamo Productivo
-        </h1>
-        <p className="text-xl md:text-xl mb-8 max-w-2xl drop-shadow-lg">
-        Pagina en construcción, para mas informacion contactanos al 73087757
-        </p>
-        <Button
-          asChild
-          size="lg"
-          className="bg-primary hover:bg-secondary text-white font-semibold py-6 px-8 text-lg rounded-full shadow-lg"
-        >
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2"
-          >
-            <MessageCircle className="w-6 h-6" />
-            Contáctanos por WhatsApp
-          </a>
-        </Button>
+      <div className="absolute inset-0 flex items-end justify-start">
+        <div className="w-full max-w-3xl bg-transparent text-white space-y-6 text-start">
+        <CardBtn
+              onClick={handleCardClick}
+              className="max-w-sm"
+            >
+              <div className="flex justify-between items-center">
+              <div className="text-lg sm:text-xl md:text-2xl text-gray-200">
+                {ctaText}
+              </div>
+              <ArrowRight className="h-8 w-8" />
+              </div>
+            </CardBtn>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight">
+            {companyName}
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl">
+            {tagline}
+          </p>
+          {ctaText && (
+            <CardBtn
+              onClick={handleCardClick}
+              className="max-w-sm"
+            >
+              <div className="flex justify-between items-center">
+              <div className="text-lg sm:text-xl md:text-2xl text-gray-200">
+                {ctaText}
+              </div>
+              <ArrowRight className="h-8 w-8" />
+              </div>
+            </CardBtn>
+          )}
+        </div>
       </div>
     </section>
   );
 };
 
-export default HeroSection;
+export default HeroHeader;

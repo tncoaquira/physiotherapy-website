@@ -1,6 +1,6 @@
 import { Twitter, Instagram, Facebook, Youtube, Linkedin } from "lucide-react";
-import ContactBtn from "../ui/contact-btn";
-import MainLink from "../ui/main-link";
+import MainLink from "../components/ui/main-link";
+import ContactBtn from "../components/ui/contact-btn";
 
 const legal = [
   { name: "Politicas de privacidad", href: "#" },

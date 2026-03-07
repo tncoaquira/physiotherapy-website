@@ -7,14 +7,14 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuLink,
-} from "../ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { Button } from "../ui/button";
+} from "../components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
+import { Button } from "../components/ui/button";
 import { cn } from "~/lib/utils";
-import { ModeToggle } from "../mode-toggle";
-import { useScroll } from "~/hook/useScroll";
-import ContactBtn from "../ui/contact-btn";
-import MainLink from "../ui/main-link";
+import { useScroll } from "~/common/hook/useScroll";
+import ContactBtn from "../components/ui/contact-btn";
+import MainLink from "../components/ui/main-link";
+import { ModeToggle } from "../components/mode-toggle";
 
 const navLinks = [
   { name: "Inicio", href: "/" },
@@ -27,7 +27,7 @@ const navLinks = [
 const numberContact = "+59173087757";
 const messageContact = "Hola, quisiera mas informacion";
 
-const Header = () => {
+const MainNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrolled = useScroll(10);
 
@@ -51,9 +51,9 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "sticky top-4 z-50 h-14 max-w-[1500px] mx-auto transition-all duration-500",
+        "sticky top-6 z-50 h-14 mx-auto transition-all duration-500",
         scrolled
-          ? "bg-background/10 backdrop-blur rounded-lg p-1"
+          ? "bg-background/10 backdrop-blur rounded-lg px-4"
           : "bg-transparent"
       )}
     >
@@ -118,4 +118,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainNavbar;
