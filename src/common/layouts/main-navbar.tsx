@@ -51,9 +51,9 @@ const MainNavbar = () => {
   return (
     <header
       className={cn(
-        "sticky top-6 z-50 h-14 mx-auto transition-all duration-500",
+        "sticky top-0 z-50 h-16 mx-auto transition-all duration-500 p-2",
         scrolled
-          ? "bg-background/10 backdrop-blur rounded-lg px-4"
+          ? "bg-background/50 backdrop-blur  px-4"
           : "bg-transparent"
       )}
     >

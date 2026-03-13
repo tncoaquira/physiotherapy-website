@@ -36,7 +36,10 @@ const TextTitle: React.FC<{ name: string }> = ({ name }) => {
 };
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border pt-16 pb-6">
+    <footer className="relative bg-gradient-to-t from-primary-dark/10 to-primary/10 border-t border-border pt-16 pb-6 overflow-hidden">
+      {/* Overlay difuminado (bordes más suaves) */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.1)_80%)] pointer-events-none" />
+
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:px-3 lg:px-0 lg:gap-12 pb-8">
           <div className="col-span-1 lg:col-span-2 sm:text-center md:text-start">
