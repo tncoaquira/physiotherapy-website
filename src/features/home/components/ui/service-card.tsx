@@ -16,7 +16,6 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   imageUrl,
-  redirecrUrl,
 }) => {
   return (
     <Card className="w-full bg-tranparent border-1 border-primary/10 transform transition-transform hover:scale-95 hover:-rotate-1">

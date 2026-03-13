@@ -7,9 +7,7 @@ import {
   TabsTrigger,
 } from "~/common/components/ui/tabs";
 import { SERVICES } from "~/common/constants";
-import { ServiceCard } from "./ui/service-card";
 import { Link } from "react-router-dom";
-import { cn } from "~/lib/utils";
 
 export function ServicesTap() {
   const [activeTab, setActiveTab] = useState<string>(SERVICES.LIST[0]?.value || "overview");

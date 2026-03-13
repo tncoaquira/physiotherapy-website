@@ -1,7 +1,6 @@
 import { SERVICES } from "~/common/constants";
 import { CollaboratorCard } from "./ui/collaborator-card";
 import {
-  TypographyH1,
   TypographyH2,
   TypographyLead,
 } from "~/common/components/ui/typography";

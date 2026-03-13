@@ -1,10 +1,5 @@
-import { Link } from "react-router-dom";
-import { Badge } from "~/common/components/ui/badge";
 import {
   Card,
-  CardAction,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "~/common/components/ui/card";
@@ -18,10 +13,7 @@ interface CollaboratorCardProps {
 }
 export const CollaboratorCard: React.FC<CollaboratorCardProps> = ({
   title,
-  description,
   imageUrl,
-  badgeText,
-  redirecrUrl,
 }) => {
   return (
     <Card className="relative bg-transparent border-none mx-auto w-full max-w-sm pt-0">
