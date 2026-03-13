@@ -8,7 +8,7 @@ import { SectionDivider } from "~/features/home/components/ui/section-divider";
 
 const Home = () => {
   return (
-    <div className="mx-15">
+    <div className="mx-2 md:mx-8 lg:mx-16">
       <HeroSection />
       {/*Nosotros */}
       <AboutSection />

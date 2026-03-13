@@ -13,7 +13,6 @@ interface CollageImageProps {
   className?: string;
   imageClassName?: string;
 }
-
 export const CollageImage: React.FC<CollageImageProps> = ({
   mainImage = { src: "/logo.webp", alt: "logo" },
   topRightImage = { src: "/logo.webp", alt: "logo" },
@@ -24,7 +23,7 @@ export const CollageImage: React.FC<CollageImageProps> = ({
 }) => {
   return (
     <div
-      className={`grid grid-cols-2 grid-rows-2 ${gap} w-full max-h-[600px] ${className}`}
+      className={`grid grid-cols-2 grid-rows-2 ${gap} w-full aspect-[4/3] ${className}`}
     >
       <div className="row-span-2">
         <img

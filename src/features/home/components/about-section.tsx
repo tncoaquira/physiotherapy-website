@@ -4,10 +4,9 @@ import {
 } from "~/common/components/ui/typography";
 import { CollageImage } from "./ui/collageImage";
 import { StatBadge } from "./ui/stat-badge";
-
 export function AboutSection() {
   return (
-    <div className=" grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 xl:gap-24 items-center mx-2">
       <CollageImage
         mainImage={{ src: "/doctor.jpg", alt: "Doctor especialista" }}
         topRightImage={{ src: "/clinica.jpg", alt: "Recepción" }}
@@ -32,7 +31,7 @@ export function AboutSection() {
           recuperación. Creemos en la rehabilitación personalizada, donde tú
           eres el centro de todo lo que hacemos.
         </TypographyLead>
-        <div className="flex flex-row gap-2 lg:gap-4 mt-4 md:mt-6">
+        <div className="flex flex-wrap gap-2 lg:gap-4 mt-4 md:mt-6">
           <StatBadge
             value="+10"
             label="años de experiencia"
